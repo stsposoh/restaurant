@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { splitChars } from '../../lib/split.js';
 import { snowState } from '../../lib/snow-state.js';
+import { loadLazyImages } from '../../lib/lazy-images.js';
 
 const PIN_VH = 3;
 const STRIKE = 0.35;
@@ -14,8 +15,7 @@ export const mountFinale = ({ root, clock, reducedMotion }) => {
   let visible = false;
 
   const load = () => {
-    sky.src = sky.dataset.src;
-    sky.removeAttribute('data-src');
+    loadLazyImages(root);
     if (reducedMotion) return;
     import('./fireworks.js').then(({ createFireworks }) => {
       fireworks = createFireworks(root.querySelector('.finale__fireworks'));

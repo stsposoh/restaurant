@@ -1,14 +1,12 @@
 import { gsap } from 'gsap';
 import { splitWords } from '../../lib/split.js';
+import { loadLazyImages } from '../../lib/lazy-images.js';
 
 const PIN_VH = 2.5;
 
 export const mountChef = ({ root, reducedMotion }) => {
   const load = () => {
-    root.querySelectorAll('img[data-src]').forEach((img) => {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    });
+    loadLazyImages(root);
   };
   if (reducedMotion) return { load };
 

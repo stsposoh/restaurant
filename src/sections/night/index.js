@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { splitChars } from '../../lib/split.js';
+import { loadLazyImages } from '../../lib/lazy-images.js';
 
 const START = 18 * 3600 + 30 * 60;
 const LAST_MINUTE = 23 * 3600 + 59 * 60;
@@ -126,10 +127,7 @@ export const mountNight = ({ root, reducedMotion }) => {
   let state = null;
 
   const load = () => {
-    root.querySelectorAll('img[data-src]').forEach((img) => {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    });
+    loadLazyImages(root);
     if (reducedMotion) return;
     Promise.all([import('./scene.js'), ...photos.map((img) => img.decode())]).then(async ([{ createNightScene }]) => {
       scene = await createNightScene(root.querySelector('.night__canvas'), photos);

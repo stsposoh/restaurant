@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { splitChars } from '../../lib/split.js';
+import { loadLazyImages } from '../../lib/lazy-images.js';
 
 const PIN_VH = 8;
 const INTRO = 0.5;
@@ -46,10 +47,7 @@ export const mountMenu = ({ root, reducedMotion }) => {
   let active = -1;
 
   const load = () => {
-    root.querySelectorAll('img[data-src]').forEach((img) => {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    });
+    loadLazyImages(root);
     if (reducedMotion) return;
     Promise.all([import('./frost.js'), ...images.map((img) => img.decode())]).then(([{ createFrost }]) => {
       frost = createFrost(root.querySelector('.menu__canvas'), images, state);

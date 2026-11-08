@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { snowState } from '../../lib/snow-state.js';
+import { loadLazyImages } from '../../lib/lazy-images.js';
 
 const PIN_VH = 6.5;
 const JOURNEY = 0.82;
@@ -119,10 +120,7 @@ export const mountAscent = ({ root, reducedMotion }) => {
   }
 
   const load = () => {
-    root.querySelectorAll('img[data-src]').forEach((img) => {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    });
+    loadLazyImages(root);
     if (reducedMotion) return;
     import('./fog.js').then(({ createFog }) => {
       fog = createFog(q('.ascent__fog'), fogState);

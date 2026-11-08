@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { loadLazyImages } from '../../lib/lazy-images.js';
 
 const PIN_VH = 6;
 const CAMERA_START = 6;
@@ -24,10 +25,7 @@ export const mountMoments = ({ root, reducedMotion }) => {
   let trigger = null;
 
   const load = () => {
-    images.forEach((img) => {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    });
+    loadLazyImages(root);
     if (reducedMotion) return;
     Promise.all([import('./scene.js'), ...images.map((img) => img.decode())]).then(([{ createMomentsScene }]) => {
       scene = createMomentsScene(root.querySelector('.moments__canvas'), images, SPACING);
