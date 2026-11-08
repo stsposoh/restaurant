@@ -1,0 +1,163 @@
+.menu {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 45% 50% at 50% 45%, rgb(232 168 83 / 0.1), rgb(232 168 83 / 0) 70%),
+    var(--ink);
+}
+
+.menu__dish {
+  position: absolute;
+  top: 8vh;
+  left: calc(62vw - 42vh);
+  width: 84vh;
+  height: 84vh;
+}
+
+.menu__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ingredient {
+  position: absolute;
+  rotate: var(--rot, 0deg);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.ingredient img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 24px rgb(5 9 16 / 0.55));
+}
+
+.ingredient--a {
+  top: 1%;
+  right: 0;
+  width: 20%;
+}
+
+.ingredient--b {
+  bottom: 3%;
+  left: 3%;
+  width: 17%;
+}
+
+.menu__courses {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 13vh;
+  display: grid;
+  width: min(30vw, 440px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course {
+  grid-area: 1 / 1;
+  align-self: end;
+  visibility: hidden;
+}
+
+.course.is-active {
+  visibility: visible;
+}
+
+.course__img {
+  display: none;
+}
+
+.course__meta {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: rgb(238 242 245 / 0.65);
+}
+
+.course__title {
+  margin-bottom: 22px;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 4vw, 76px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.course__title .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.course__title .char {
+  display: inline-block;
+}
+
+.course__desc {
+  max-width: 34ch;
+  font-size: 17px;
+  line-height: 1.5;
+  color: rgb(238 242 245 / 0.82);
+}
+
+.course__wine {
+  margin-top: 14px;
+  font-size: 15px;
+  color: var(--candle);
+}
+
+.menu--static {
+  height: auto;
+  padding: 16vh var(--gutter);
+}
+
+.menu--static .menu__dish {
+  display: none;
+}
+
+.menu--static .menu__courses {
+  position: static;
+  gap: 12vh;
+  width: auto;
+}
+
+.menu--static .course {
+  display: grid;
+  grid-template-columns: minmax(0, 440px) 64vh;
+  grid-template-rows: 1fr repeat(4, auto) 1fr;
+  column-gap: 6vw;
+  grid-area: auto;
+  visibility: visible;
+}
+
+.menu--static .course__meta {
+  grid-row: 2;
+}
+
+.menu--static .course__title {
+  grid-row: 3;
+}
+
+.menu--static .course__desc {
+  grid-row: 4;
+}
+
+.menu--static .course__wine {
+  grid-row: 5;
+}
+
+.menu--static .course__img {
+  display: block;
+  grid-row: 1 / -1;
+  grid-column: 2;
+  width: 64vh;
+  height: 64vh;
+  mask-image: radial-gradient(circle closest-side, #000 80%, transparent 100%);
+}

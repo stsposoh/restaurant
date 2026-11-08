@@ -1,0 +1,131 @@
+.ascent {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.ascent__sky,
+.ascent__night,
+.ascent__shade,
+.ascent__fog,
+.ascent__doors,
+.ascent__doors-dim {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+
+.ascent__sky {
+  height: 140vh;
+  object-fit: cover;
+}
+
+.ascent__night {
+  height: 100%;
+  background: linear-gradient(to bottom, var(--ink) 20%, rgb(14 22 36 / 0.4));
+  opacity: 0;
+}
+
+.ascent__shade {
+  height: 100%;
+  background: var(--ink);
+  opacity: 0;
+}
+
+.ascent__layer {
+  position: absolute;
+  top: 0;
+  left: -5vw;
+  width: 110vw;
+  height: auto;
+  will-change: transform;
+}
+
+.ascent__layer--screen {
+  mix-blend-mode: screen;
+}
+
+.ascent__layer--summit {
+  left: 3vw;
+}
+
+/* Cabin centre sits at 50.5% / 60% of the A7 image; the image box is 110vw wide and 61.4vw tall. */
+.ascent__gondola {
+  position: absolute;
+  left: calc(36vw - 55.5vw);
+  top: calc(38vh - 36.8vw);
+  width: 110vw;
+  will-change: transform;
+}
+
+.ascent__gondola img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ascent__gondola::before {
+  content: '';
+  position: absolute;
+  top: 10.4%;
+  left: -100%;
+  right: -100%;
+  z-index: -1;
+  height: 9px;
+  background: #5a6068;
+  transform: translateY(-50%);
+}
+
+.ascent__fog {
+  height: 100%;
+  visibility: hidden;
+}
+
+.ascent__readout {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 13vh;
+}
+
+.ascent__caption {
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 2.4vw, 44px);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.ascent__altimeter {
+  font-size: clamp(72px, 6.4vw, 120px);
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 30px rgb(14 22 36 / 0.5);
+}
+
+.ascent__doors {
+  height: 100%;
+  clip-path: inset(0% 50% 0% 50%);
+  background:
+    radial-gradient(ellipse 45% 70% at 50% 55%, rgb(232 168 83 / 0.38), rgb(232 168 83 / 0) 70%),
+    var(--ink);
+}
+
+.ascent__doors-dim {
+  height: 100%;
+  background: var(--ink);
+  opacity: 0;
+}
+
+.ascent__seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 1px);
+  width: 2px;
+  background: var(--candle);
+  box-shadow: 0 0 24px 6px rgb(232 168 83 / 0.55);
+  opacity: 0;
+}

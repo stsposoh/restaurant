@@ -1,0 +1,90 @@
+.finale {
+  background: var(--ink);
+}
+
+.finale__stage {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.finale__sky,
+.finale__fireworks {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.finale__sky {
+  object-fit: cover;
+}
+
+.finale__stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgb(14 22 36 / 0.85), rgb(14 22 36 / 0) 45%);
+}
+
+.finale__content {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 8vh;
+  z-index: 1;
+}
+
+.finale__line {
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 2.4vw, 44px);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.finale__wordmark {
+  position: absolute;
+  top: 14vh;
+  left: var(--gutter);
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 21vw;
+  font-weight: 300;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.finale__wordmark .char {
+  display: inline-block;
+}
+
+.finale__footer {
+  display: grid;
+  grid-template-columns: repeat(3, auto) minmax(0, 1fr);
+  gap: 2vw 4vw;
+  align-items: start;
+  padding: 6vh var(--gutter) 10vh;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgb(238 242 245 / 0.7);
+}
+
+.finale__credits {
+  justify-self: end;
+  max-width: 44ch;
+  text-align: right;
+  color: rgb(238 242 245 / 0.5);
+}
+
+.finale__credits a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.finale__credits a:hover {
+  color: var(--candle);
+}

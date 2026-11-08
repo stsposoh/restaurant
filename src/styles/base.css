@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  background: var(--ink);
+}
+
+body {
+  min-width: 1280px;
+  background: var(--ink);
+  color: var(--snow);
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--candle);
+  outline-offset: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7em 1.25em;
+  border-radius: 2px;
+  font-family: var(--font-text);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background-color 0.25s var(--ease-out);
+}
+
+.button--fox {
+  background: var(--fox);
+  color: var(--snow);
+}
+
+.button--fox:hover {
+  background: #d4552a;
+}
+
+.button--large {
+  padding: 1em 1.75em;
+  font-size: 17px;
+}
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 28px var(--gutter);
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+
+.nav__mark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  color: var(--fox);
+}
+
+.nav__mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav__wordmark {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.nav__links {
+  display: flex;
+  gap: 36px;
+  font-size: 15px;
+}
+
+.nav__links a {
+  color: rgb(238 242 245 / 0.78);
+  transition: color 0.25s var(--ease-out);
+}
+
+.nav__links a:hover {
+  color: var(--candle);
+}
+
+.scroll-clock {
+  position: fixed;
+  right: var(--gutter);
+  bottom: 32px;
+  z-index: 20;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: rgb(238 242 245 / 0.7);
+}
+
+.scroll-clock__ms {
+  color: var(--candle);
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+}
+
+.preloader__time {
+  font-size: 56px;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.preloader__sec {
+  display: inline-block;
+}
+
+
+.snow {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+

@@ -1,0 +1,68 @@
+.moments {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.moments__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.moments__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.moment__img {
+  display: none;
+}
+
+.moment__time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+  color: rgb(238 242 245 / 0.8);
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.moments--static {
+  height: auto;
+  padding: 16vh var(--gutter);
+}
+
+.moments--static .moments__canvas {
+  display: none;
+}
+
+.moments--static .moments__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8vh 4vw;
+  align-items: start;
+}
+
+.moments--static .moment__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.moments--static .moment__time {
+  position: static;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+.moments--static .moment:nth-child(even) {
+  margin-top: 24vh;
+}

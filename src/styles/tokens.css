@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Zodiak';
+  src: url('/fonts/Zodiak-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #0e1624;
+  --glacier: #2a3a52;
+  --snow: #eef2f5;
+  --candle: #e8a853;
+  --fox: #c4471d;
+
+  --font-display: 'Zodiak', 'Iowan Old Style', Georgia, serif;
+  --font-text: 'Switzer', 'Helvetica Neue', Arial, sans-serif;
+
+  --gutter: clamp(40px, 3.6vw, 64px);
+  --ease-out: cubic-bezier(0.2, 0.7, 0.1, 1);
+}

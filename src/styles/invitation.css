@@ -1,0 +1,21 @@
+.invitation {
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+  padding: 0 var(--gutter) 15vh;
+  background: var(--ink);
+}
+
+.invitation__text {
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 3.9vw, 72px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+
+.invitation__text .word {
+  display: inline-block;
+}

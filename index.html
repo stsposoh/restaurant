@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Fox — New Year's Eve on Hollister Peak</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/Zodiak-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Switzer-Variable.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <div class="preloader" aria-hidden="true">
+      <p class="preloader__time">23:59:<span class="preloader__sec">57</span></p>
+    </div>
+
+    <header class="nav">
+      <a class="nav__brand" href="#top" aria-label="Red Fox, back to top">
+        <span class="nav__mark" data-logo></span>
+        <span class="nav__wordmark">Red Fox</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#menu">Menu</a>
+        <a href="#night">The Night</a>
+        <a href="#chef">Chef</a>
+      </nav>
+      <a class="button button--fox nav__cta" href="#booking">Book your table</a>
+    </header>
+
+    <canvas class="snow" aria-hidden="true"></canvas>
+
+    <p class="scroll-clock" aria-hidden="true"><span class="scroll-clock__time">23:59:59</span><span class="scroll-clock__ms">.000</span></p>
+
+    <main id="top">
+      <section class="hero" aria-label="The last second of the year">
+        <div class="hero__media">
+          <canvas class="hero__frames"></canvas>
+        </div>
+        <div class="hero__scrim" aria-hidden="true"></div>
+
+        <div class="hero__titles">
+          <h1 class="title" data-title="intro">The last second of the year</h1>
+          <p class="title" data-title="served">Served at 23:59:59</p>
+          <p class="title" data-title="stops">Time stops at Red Fox</p>
+          <div class="hero__closing" data-title="closing">
+            <h2 class="title title--closing">
+              <span class="title__line">New Year's Eve</span>
+              <span class="title__line">at 2847 metres</span>
+            </h2>
+            <div class="hero__cta">
+              <p class="hero__lede">Seven courses on the summit of Hollister Peak, the night of 31 December.</p>
+              <a class="button button--fox button--large" href="#booking">Book your table</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="invitation" id="invitation" aria-label="Invitation">
+        <p class="invitation__text">
+          Some moments deserve to last forever. Spend the last second of 2026 with us — 2847 metres above the world.
+        </p>
+      </section>
+
+      <section class="ascent" id="ascent" aria-label="The ascent">
+        <img class="ascent__sky" data-layer="sky" data-src="/ascent/A1.webp" alt="" />
+        <div class="ascent__night" aria-hidden="true"></div>
+        <img class="ascent__layer" data-layer="far" data-src="/ascent/A2.webp" alt="" />
+        <img class="ascent__layer" data-layer="mid" data-src="/ascent/A3.webp" alt="" />
+        <img class="ascent__layer" data-layer="village" data-src="/ascent/A4.webp" alt="" />
+        <img class="ascent__layer ascent__layer--screen" data-layer="clouds" data-src="/ascent/A5.webp" alt="" />
+        <div class="ascent__shade" aria-hidden="true"></div>
+        <img class="ascent__layer ascent__layer--summit" data-layer="summit" data-src="/ascent/A8.webp" alt="" />
+        <img class="ascent__layer" data-layer="spruce" data-src="/ascent/A6.webp" alt="" />
+        <div class="ascent__gondola">
+          <img data-src="/ascent/A7.webp" alt="A gondola cabin with guests inside, climbing to the summit" />
+        </div>
+        <canvas class="ascent__fog" aria-hidden="true"></canvas>
+
+        <div class="ascent__readout">
+          <p class="ascent__caption">Last gondola up, 18:30</p>
+          <p class="ascent__altimeter"><span class="ascent__metres">1&#8239;200</span> m</p>
+        </div>
+
+        <div class="ascent__doors" aria-hidden="true"><div class="ascent__doors-dim"></div></div>
+        <div class="ascent__seam" aria-hidden="true"></div>
+      </section>
+
+      <section class="menu" id="menu" aria-labelledby="menu-heading">
+        <h2 class="sr-only" id="menu-heading">The New Year's Menu</h2>
+
+        <div class="menu__dish" aria-hidden="true">
+          <canvas class="menu__canvas"></canvas>
+          <div class="ingredient ingredient--a" data-course="0" data-depth="0.9" style="--rot: -14deg"><img data-src="/menu/ingredients/I1_juniper.webp" alt="" /></div>
+          <div class="ingredient ingredient--b" data-course="0" data-depth="0.5" style="--rot: 8deg"><img data-src="/menu/ingredients/I7_salt.webp" alt="" /></div>
+          <div class="ingredient ingredient--a" data-course="1" data-depth="0.9" style="--rot: 12deg"><img data-src="/menu/ingredients/I8_chanterelle.webp" alt="" /></div>
+          <div class="ingredient ingredient--b" data-course="1" data-depth="0.5" style="--rot: -24deg"><img data-src="/menu/ingredients/I2_spruce.webp" alt="" /></div>
+          <div class="ingredient ingredient--a" data-course="2" data-depth="0.8" style="--rot: -8deg"><img data-src="/menu/ingredients/I9_hazelnut.webp" alt="" /></div>
+          <div class="ingredient ingredient--b" data-course="2" data-depth="0.5" style="--rot: 20deg"><img data-src="/menu/ingredients/I7_salt.webp" alt="" /></div>
+          <div class="ingredient ingredient--a" data-course="3" data-depth="1" style="--rot: 16deg"><img data-src="/menu/ingredients/I10_ice.webp" alt="" /></div>
+          <div class="ingredient ingredient--b" data-course="3" data-depth="0.5" style="--rot: -6deg"><img data-src="/menu/ingredients/I7_salt.webp" alt="" /></div>
+          <div class="ingredient ingredient--a" data-course="4" data-depth="0.7" style="--rot: 10deg"><img data-src="/menu/ingredients/I6_caviar.webp" alt="" /></div>
+          <div class="ingredient ingredient--b" data-course="4" data-depth="1" style="--rot: -18deg"><img data-src="/menu/ingredients/I5_goldleaf.webp" alt="" /></div>
+          <div class="ingredient ingredient--a" data-course="5" data-depth="0.9" style="--rot: -10deg"><img data-src="/menu/ingredients/I3_lingonberry.webp" alt="" /></div>
+          <div class="ingredient ingredient--b" data-course="5" data-depth="0.5" style="--rot: 14deg"><img data-src="/menu/ingredients/I1_juniper.webp" alt="" /></div>
+          <div class="ingredient ingredient--a" data-course="6" data-depth="1" style="--rot: 6deg"><img data-src="/menu/ingredients/I12_cloudberry.webp" alt="" /></div>
+          <div class="ingredient ingredient--b" data-course="6" data-depth="0.6" style="--rot: -30deg"><img data-src="/menu/ingredients/I4_redcurrant.webp" alt="" /></div>
+        </div>
+
+        <ol class="menu__courses">
+          <li class="course">
+            <img class="course__img" data-src="/menu/D1.webp" alt="Pale pink slices of smoked trout in buttermilk with green dill oil and dark rye crumble" />
+            <p class="course__meta"><span>Course 01 / 07</span><span>1&#8239;200 m</span></p>
+            <h3 class="course__title">Valley</h3>
+            <p class="course__desc">Alpine trout smoked over juniper, buttermilk, dill oil, rye crumble.</p>
+            <p class="course__wine">With a glass of Grüner Veltliner, Wachau.</p>
+          </li>
+          <li class="course">
+            <img class="course__img" data-src="/menu/D2.webp" alt="A round wild mushroom tart with chanterelles, porcini and shaved black truffle" />
+            <p class="course__meta"><span>Course 02 / 07</span><span>1&#8239;650 m</span></p>
+            <h3 class="course__title">Forest</h3>
+            <p class="course__desc">Wild mushroom tart, chanterelles and porcini, black truffle, pine salt.</p>
+            <p class="course__wine">With a glass of Pinot Noir, Burgundy.</p>
+          </li>
+          <li class="course">
+            <img class="course__img" data-src="/menu/D3.webp" alt="A disc of roasted celeriac on hay, glazed with brown butter and scattered with hazelnuts" />
+            <p class="course__meta"><span>Course 03 / 07</span><span>1&#8239;900 m</span></p>
+            <h3 class="course__title">Meadow under snow</h3>
+            <p class="course__desc">Celeriac baked in hay, brown butter, toasted hazelnuts, celeriac snow.</p>
+            <p class="course__wine">With a glass of Chardonnay, Jura.</p>
+          </li>
+          <li class="course">
+            <img class="course__img" data-src="/menu/D4.webp" alt="Translucent scallop slices with green apple granita and white horseradish snow" />
+            <p class="course__meta"><span>Course 04 / 07</span><span>2&#8239;300 m</span></p>
+            <h3 class="course__title">Glacier</h3>
+            <p class="course__desc">Scallop crudo, green apple granita, horseradish snow.</p>
+            <p class="course__wine">With a glass of Blanc de Blancs Champagne.</p>
+          </li>
+          <li class="course">
+            <img class="course__img" data-src="/menu/D5.webp" alt="Lobster tail medallions in beurre blanc with a quenelle of black caviar and gold leaf" />
+            <p class="course__meta"><span>Course 05 / 07</span><span>2&#8239;600 m</span></p>
+            <h3 class="course__title">The Midnight Lobster</h3>
+            <p class="course__desc">Lobster tail, champagne beurre blanc, Oscietra caviar, gold leaf.</p>
+            <p class="course__wine">With a glass of vintage Champagne.</p>
+          </li>
+          <li class="course">
+            <img class="course__img" data-src="/menu/D6.webp" alt="Rosy venison slices with a juniper crust, red cabbage purée and lingonberries" />
+            <p class="course__meta"><span>Course 06 / 07</span><span>2&#8239;847 m</span></p>
+            <h3 class="course__title">Summit</h3>
+            <p class="course__desc">Venison loin in a juniper crust, red cabbage, lingonberries, red wine jus.</p>
+            <p class="course__wine">With a glass of Syrah, Northern Rhône.</p>
+          </li>
+          <li class="course">
+            <img class="course__img" data-src="/menu/D7.webp" alt="A Baked Alaska shaped like a snowy peak with torched meringue in golden cloudberry sauce" />
+            <p class="course__meta"><span>Course 07 / 07</span><span>Dessert</span></p>
+            <h3 class="course__title">Hollister Peak</h3>
+            <p class="course__desc">Baked Alaska shaped as the peak, torched meringue, cloudberry sauce.</p>
+            <p class="course__wine">With a glass of Tokaji Aszú.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="night" id="night" aria-labelledby="night-heading">
+        <h2 class="sr-only" id="night-heading">The Night</h2>
+        <canvas class="night__canvas" aria-hidden="true"></canvas>
+        <p class="night__readout" aria-hidden="true">18:30:00</p>
+
+        <ol class="night__events">
+          <li class="event" data-minute="0">
+            <img class="event__img" data-src="/night/N1.webp" alt="A glass gondola cabin with guests inside climbing above a snowy forest at dusk" />
+            <p class="event__time">18:30</p>
+            <h3 class="event__title">Last gondola up</h3>
+            <p class="event__line">The cabins climb through blue dusk as the peaks turn pink.</p>
+          </li>
+          <li class="event" data-minute="30">
+            <img class="event__img" data-src="/night/N2.webp" alt="Guests in furs with champagne on a snowy terrace beside an ice bar and fire bowls" />
+            <p class="event__time">19:00</p>
+            <h3 class="event__title">Champagne on the snow terrace</h3>
+            <p class="event__line">An ice bar, fire bowls and the whole range behind you.</p>
+          </li>
+          <li class="event" data-minute="120">
+            <img class="event__img" data-src="/night/N3.webp" alt="Waiters carrying the first dishes through a candlelit dining room full of guests" />
+            <p class="event__time">20:30</p>
+            <h3 class="event__title">Dinner begins</h3>
+            <p class="event__line">Seven courses, served by candlelight.</p>
+          </li>
+          <li class="event" data-minute="180">
+            <img class="event__img" data-src="/night/N4.webp" alt="A jazz singer at a vintage microphone beside a stone fireplace with a double bass and piano" />
+            <p class="event__time">21:30</p>
+            <h3 class="event__title">Live: jazz by the fireplace</h3>
+            <p class="event__line">Voice, double bass and piano beside the stone hearth.</p>
+          </li>
+          <li class="event" data-minute="270">
+            <img class="event__img" data-src="/night/N5.webp" alt="A line of skiers with burning torches winding down a dark snowy slope" />
+            <p class="event__time">23:00</p>
+            <h3 class="event__title">Torchlight descent</h3>
+            <p class="event__line">The ski school carries fire down the dark slope.</p>
+          </li>
+          <li class="event" data-minute="300">
+            <img class="event__img" data-src="/night/N6.webp" alt="A Baked Alaska flambéed at the table with blue and golden flames lighting the guests' faces" />
+            <p class="event__time">23:30</p>
+            <h3 class="event__title">Grand dessert — flambé at the table</h3>
+            <p class="event__line">Hollister Peak, set alight.</p>
+          </li>
+        </ol>
+
+        <div class="night__finale">
+          <p class="night__frozen-time">23:59:59</p>
+          <h3 class="night__frozen-title">The frozen second</h3>
+          <ul class="night__locked">
+            <li><span>00:00</span> Fireworks over Hollister ridge</li>
+            <li><span>01:00</span> After-party</li>
+          </ul>
+          <p class="night__waiting">Midnight is waiting. Keep scrolling.</p>
+        </div>
+      </section>
+      <section class="moments" id="moments" aria-labelledby="moments-heading">
+        <h2 class="sr-only" id="moments-heading">Frozen moments</h2>
+        <canvas class="moments__canvas" aria-hidden="true"></canvas>
+        <ol class="moments__list">
+          <li class="moment"><img class="moment__img" data-src="/moments/G1.webp" alt="Champagne pouring down a tower of crystal coupes, droplets suspended in the air" /><p class="moment__time">23:59:59.000</p></li>
+          <li class="moment"><img class="moment__img" data-src="/moments/G2.webp" alt="Two guests clinking glasses, champagne and gold confetti frozen in mid-air" /><p class="moment__time">23:59:59.000</p></li>
+          <li class="moment"><img class="moment__img" data-src="/moments/G3.webp" alt="A gloved hand holding a burning sparkler, its sparks frozen" /><p class="moment__time">23:59:59.000</p></li>
+          <li class="moment"><img class="moment__img" data-src="/moments/G4.webp" alt="A bottle hanging in mid-air above the glowing onyx bar, ice cubes suspended" /><p class="moment__time">23:59:59.000</p></li>
+          <li class="moment"><img class="moment__img" data-src="/moments/G5.webp" alt="A red fox sitting in the snow, looking at the lit windows of Red Fox" /><p class="moment__time">23:59:59.000</p></li>
+          <li class="moment"><img class="moment__img" data-src="/moments/G6.webp" alt="A couple frozen mid-dance by the Christmas tree, confetti hanging around them" /><p class="moment__time">23:59:59.000</p></li>
+          <li class="moment"><img class="moment__img" data-src="/moments/G7.webp" alt="Leather ski gloves and a glass of red wine on a frosted windowsill above the valley" /><p class="moment__time">23:59:59.000</p></li>
+          <li class="moment"><img class="moment__img" data-src="/moments/G8.webp" alt="A skier carrying a burning torch, flames and snow spray frozen" /><p class="moment__time">23:59:59.000</p></li>
+        </ol>
+      </section>
+      <section class="chef" id="chef" aria-labelledby="chef-heading">
+        <h2 class="sr-only" id="chef-heading">The chef</h2>
+        <div class="chef__stage">
+          <img class="chef__portrait" data-src="/chef/C1.webp" alt="Head chef Anselm Brandt salting a plate under a single lamp, the salt crystals frozen in the air" />
+          <blockquote class="chef__quote-block">
+            <p class="chef__quote">At 2847 metres water boils at ninety degrees. The mountain sets the pace — we simply listen.</p>
+            <footer class="chef__by">Anselm Brandt, head chef</footer>
+          </blockquote>
+        </div>
+        <figure class="chef__band">
+          <img data-src="/chef/C2.webp" alt="The chef's hands placing frosted spruce tips on lobster with tweezers" />
+        </figure>
+        <ul class="chef__facts">
+          <li>Every ingredient rides up on the first gondola, at 6:40 in the morning.</li>
+          <li>Spruce tips, juniper and lingonberries are picked on the slopes below the restaurant.</li>
+          <li>Seven courses, cooked for a single sitting of 120 guests.</li>
+        </ul>
+      </section>
+      <section class="booking" id="booking" aria-labelledby="booking-heading">
+        <div class="booking__intro">
+          <h2 class="booking__title" id="booking-heading">Book your table</h2>
+          <p class="booking__lede">New Year's Eve, 31 December 2026. Seven courses from 20:30; the last gondola goes up at 18:30.</p>
+          <p class="booking__meta"><span class="booking__seats">24</span> of 120 seats left</p>
+          <p class="booking__meta">Midnight in <span class="booking__countdown">53 days, 00:00:00</span></p>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket__inner">
+            <form class="ticket__face ticket__front" novalidate>
+              <span class="ticket__hole" aria-hidden="true"></span>
+              <div class="ticket__main">
+                <div class="ticket__brand">
+                  <span class="ticket__mark" data-mark aria-hidden="true"></span>
+                  <span class="ticket__wordmark">Red Fox</span>
+                  <span class="ticket__place">Hollister Peak, 2847 m<br />31 December 2026</span>
+                </div>
+
+                <label class="field">
+                  <span class="field__label">Name for the booking</span>
+                  <input class="field__input" name="name" type="text" autocomplete="name" required aria-describedby="booking-error" />
+                </label>
+                <p class="field__error" id="booking-error" aria-live="polite"></p>
+
+                <div class="ticket__row">
+                  <fieldset class="stepper">
+                    <legend class="field__label">Guests</legend>
+                    <button class="stepper__button" type="button" data-step="-1" aria-label="Fewer guests">−</button>
+                    <output class="stepper__value" name="guests" aria-live="polite">2</output>
+                    <button class="stepper__button" type="button" data-step="1" aria-label="More guests">+</button>
+                  </fieldset>
+                  <fieldset class="gondola">
+                    <legend class="field__label">Gondola up</legend>
+                    <label class="gondola__option"><input type="radio" name="gondola" value="17:30" /><span>17:30</span></label>
+                    <label class="gondola__option"><input type="radio" name="gondola" value="18:00" checked /><span>18:00</span></label>
+                    <label class="gondola__option"><input type="radio" name="gondola" value="18:30" /><span>18:30, last</span></label>
+                  </fieldset>
+                </div>
+
+                <button class="button button--fox ticket__submit" type="submit">Book your table</button>
+              </div>
+              <div class="ticket__stub" aria-hidden="true">
+                <svg class="ticket__qr" data-qr="red-fox" viewBox="0 0 25 25"></svg>
+                <span class="ticket__stub-label">Table</span>
+                <span class="ticket__stub-value">—</span>
+              </div>
+            </form>
+
+            <div class="ticket__face ticket__back" inert>
+              <span class="ticket__hole" aria-hidden="true"></span>
+              <div class="ticket__main">
+                <div class="ticket__brand">
+                  <span class="ticket__mark" data-mark aria-hidden="true"></span>
+                  <span class="ticket__wordmark">Red Fox</span>
+                  <span class="ticket__place">Hollister Peak, 2847 m<br />31 December 2026</span>
+                </div>
+                <h3 class="ticket__booked" tabindex="-1">Table booked</h3>
+                <dl class="ticket__details">
+                  <div><dt>Name</dt><dd data-out="name"></dd></div>
+                  <div><dt>Guests</dt><dd data-out="guests"></dd></div>
+                  <div><dt>Gondola up</dt><dd data-out="gondola"></dd></div>
+                  <div><dt>Table</dt><dd data-out="table"></dd></div>
+                </dl>
+                <p class="ticket__note">See you at 2847 metres.</p>
+                <button class="ticket__edit" type="button">Edit booking</button>
+              </div>
+              <div class="ticket__stub" aria-hidden="true">
+                <svg class="ticket__qr" data-qr-out viewBox="0 0 25 25"></svg>
+                <span class="ticket__stub-label">Table</span>
+                <span class="ticket__stub-value" data-out="table"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="sr-only" aria-live="polite" data-announce></p>
+      </section>
+      <footer class="finale" id="finale" aria-labelledby="finale-heading">
+        <div class="finale__stage">
+          <img class="finale__sky" data-src="/finale/F1.webp" alt="Red Fox on the summit of Hollister Peak under a starry sky at midnight" />
+          <canvas class="finale__fireworks" aria-hidden="true"></canvas>
+          <div class="finale__content">
+            <h2 class="sr-only" id="finale-heading">Midnight</h2>
+            <p class="finale__line">Happy New Year from 2847 metres.</p>
+            <a class="button button--fox button--large finale__cta" href="#booking">Book your table</a>
+          </div>
+          <p class="finale__wordmark" aria-hidden="true">Red Fox</p>
+        </div>
+        <div class="finale__footer">
+          <p>Red Fox, summit of Hollister Peak, upper gondola station</p>
+          <p>hello@redfox.example</p>
+          <p>Instagram @redfox.hollister</p>
+          <p class="finale__credits">
+            <a href="https://sketchfab.com/3d-models/322775e936184a75a2cd7d3ef0a84184">"Old Fashioned Clock"</a> by Mark Peters,
+            <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+            A design concept: Red Fox and Hollister Peak are fictional.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

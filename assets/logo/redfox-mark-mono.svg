@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Red Fox">
+  <mask id="rf-mono">
+    <polygon points="62,14 36,108 80,94" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="178,14 204,108 160,94" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="62,14 80,94 98,80" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="178,14 160,94 142,80" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="64,34 50,96 80,90" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="176,34 190,96 160,90" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="64,34 80,90 92,82" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="176,34 160,90 148,82" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="98,80 120,72 120,116" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="142,80 120,72 120,116" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="36,108 80,94 98,80 120,116 96,136 62,128" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="204,108 160,94 142,80 120,116 144,136 178,128" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="36,108 62,128 96,136 84,154 46,146 22,130" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="204,108 178,128 144,136 156,154 194,146 218,130" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="96,136 84,154 92,160" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="144,136 156,154 148,160" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="96,136 120,116 120,178 106,182 92,160" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="144,136 120,116 120,178 134,182 148,160" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="22,130 46,146 84,154 92,160 106,182 108,200 96,198 100,206 78,196 80,204 58,188 60,196 40,176 42,184 28,160 30,170 20,150" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="218,130 194,146 156,154 148,160 134,182 132,200 144,198 140,206 162,196 160,204 182,188 180,196 200,176 198,184 212,160 210,170 220,150" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="46,146 84,154 92,160 72,168" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="194,146 156,154 148,160 168,168" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="106,182 120,178 120,212 108,200" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="134,182 120,178 120,212 132,200" fill="#fff" stroke="#fff" stroke-width="0.8" stroke-linejoin="round"/>
+    <polygon points="64,34 50,96 80,90" fill="#000"/>
+    <polygon points="176,34 190,96 160,90" fill="#000"/>
+    <polygon points="78,122 104,128 98,134 86,133" fill="#000"/>
+    <polygon points="162,122 136,128 142,134 154,133" fill="#000"/>
+    <polygon points="108,190 132,190 126,202 114,202" fill="#000"/>
+    <polyline points="51,54 57,48 63,57 69,46 75,54 80.5,48" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="miter"/>
+    <polyline points="189,54 183,48 177,57 171,46 165,54 159.5,48" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="miter"/>
+  </mask>
+  <rect width="240" height="240" fill="currentColor" mask="url(#rf-mono)"/>
+</svg>

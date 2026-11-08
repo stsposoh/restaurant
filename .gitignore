@@ -1,0 +1,21 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Source photos, video, frames and the original 3D model (338 MB).
+# The site's optimised assets are generated from them into public/ and are committed.
+references/
+
+# Local AI tooling: symlinks to a local rules repo and editor agent configs
+AGENTS.md
+CLAUDE.md
+.claude/
+.cursor/
+.cursorignore
+
+# OS and editor noise
+.DS_Store
+*.log
+.vite/
+.env
+.env.*

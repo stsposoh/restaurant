@@ -1,0 +1,350 @@
+.booking {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(46vw, 700px);
+  align-items: end;
+  gap: 5vw;
+  min-height: 100vh;
+  padding: 16vh var(--gutter) 13vh;
+  background:
+    radial-gradient(ellipse 34% 50% at 72% 52%, rgb(232 168 83 / 0.2), rgb(232 168 83 / 0) 70%),
+    var(--ink);
+}
+
+.booking__title {
+  margin-bottom: 24px;
+  font-family: var(--font-display);
+  font-size: clamp(56px, 5vw, 96px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.booking__lede {
+  max-width: 38ch;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgb(238 242 245 / 0.82);
+}
+
+.booking__meta {
+  font-size: 15px;
+  line-height: 1.9;
+  font-variant-numeric: tabular-nums;
+  color: rgb(238 242 245 / 0.65);
+}
+
+.booking__seats,
+.booking__countdown {
+  color: var(--candle);
+}
+
+/* The ticket: a lit physical card, so it is the one light surface on a dark page. */
+.ticket {
+  --card-ink: #1a1f2a;
+  perspective: 1800px;
+  rotate: -1.5deg;
+}
+
+.ticket__inner {
+  display: grid;
+  transform-style: preserve-3d;
+}
+
+.ticket__face {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  grid-area: 1 / 1;
+  border-radius: 14px;
+  color: var(--card-ink);
+  background: linear-gradient(170deg, #f5efe4 0%, #e9e5dd 55%, #d9dad8 100%);
+  box-shadow: 0 40px 80px rgb(4 8 14 / 0.6), 0 2px 0 rgb(255 255 255 / 0.5) inset;
+  backface-visibility: hidden;
+}
+
+.ticket__back {
+  transform: rotateY(180deg);
+}
+
+.ticket__hole {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 44px;
+  height: 9px;
+  border-radius: 5px;
+  background: var(--ink);
+  translate: -50% 0;
+}
+
+.ticket__main {
+  padding: 40px 36px 34px;
+}
+
+.ticket__brand {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 12px;
+  margin-bottom: 32px;
+}
+
+.ticket__mark {
+  width: 40px;
+  height: 40px;
+}
+
+.ticket__mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ticket__wordmark {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: -0.01em;
+}
+
+.ticket__place {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
+.field {
+  display: block;
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.field__input {
+  width: 100%;
+  padding: 6px 0 8px;
+  border: 0;
+  border-bottom: 1px solid rgb(26 31 42 / 0.4);
+  background: transparent;
+  color: inherit;
+  font: 400 20px/1.3 var(--font-text);
+}
+
+.field__input:focus {
+  border-bottom-color: var(--card-ink);
+}
+
+.ticket :focus-visible {
+  outline: 2px solid var(--card-ink);
+  outline-offset: 4px;
+}
+
+.field__input[aria-invalid='true'] {
+  border-bottom: 2px solid var(--card-ink);
+}
+
+.field__error {
+  min-height: 22px;
+  margin: 6px 0 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ticket__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 40px;
+  margin-bottom: 30px;
+}
+
+.stepper,
+.gondola {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.stepper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.stepper legend {
+  width: 100%;
+}
+
+.stepper__button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgb(26 31 42 / 0.45);
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font: 400 20px/1 var(--font-text);
+  cursor: pointer;
+}
+
+.stepper__button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.stepper__value {
+  min-width: 1.2ch;
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.gondola {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.gondola legend {
+  width: 100%;
+}
+
+.gondola__option {
+  position: relative;
+  cursor: pointer;
+}
+
+.gondola__option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.gondola__option span {
+  display: block;
+  padding: 7px 14px;
+  border: 1px solid rgb(26 31 42 / 0.35);
+  border-radius: 999px;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.gondola__option input:checked + span {
+  background: var(--card-ink);
+  color: #f5efe4;
+  border-color: var(--card-ink);
+}
+
+.gondola__option input:focus-visible + span {
+  outline: 2px solid var(--card-ink);
+  outline-offset: 3px;
+}
+
+.ticket__submit {
+  border: 0;
+  cursor: pointer;
+}
+
+.ticket__stub {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 24px 18px;
+  border-left: 2px dashed rgb(26 31 42 / 0.28);
+}
+
+.ticket__stub::before,
+.ticket__stub::after {
+  content: '';
+  position: absolute;
+  left: -13px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.ticket__stub::before {
+  top: -12px;
+}
+
+.ticket__stub::after {
+  bottom: -12px;
+}
+
+.ticket__qr {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 14px;
+  fill: var(--card-ink);
+  shape-rendering: crispEdges;
+}
+
+.ticket__stub-label {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.ticket__stub-value {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.ticket__booked {
+  margin-bottom: 24px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.ticket__booked:focus {
+  outline: none;
+}
+
+.ticket__details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin: 0 0 22px;
+}
+
+.ticket__details dt {
+  margin-bottom: 4px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.ticket__details dd {
+  margin: 0;
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.ticket__note {
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.ticket__edit {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: none;
+  color: inherit;
+  font: 500 15px/1.4 var(--font-text);
+  cursor: pointer;
+}
